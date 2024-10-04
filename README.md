@@ -68,8 +68,9 @@ No elevated privileges are required to decrypt previously extracted files or wor
 
 #### Video
 
+https://github.com/user-attachments/assets/1565ace4-78da-4a0f-8f56-2071ac9dc2f6
 
-     
+
 
 
 
