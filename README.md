@@ -3,6 +3,12 @@
 **Defender Evidence Inspector** is a powerful C# tool designed to assist digital forensics and incident response teams by extracting and analyzing key evidence from Microsoft Windows Defender during cybersecurity incidents. It allows users to decrypt and parse Defender’s internal files, providing critical metadata like detection timestamps, threat names, and file paths, which are essential for thorough investigations.
 The tool can also decrypt malicious files stored by Defender and retrieve important details such as file timestamps (Last Write Time, Creation Time, Last Access Time). Investigators can extract and decrypt this data from both the default Windows Defender directories or any specified location using simple command-line flags.
 
+# Features
+- Decrypt single quarantine malicious file;
+- Decrypt parse and print metadata;
+- Enum and decrypt quarantine files and thier metadata;
+- Exctract, Enum and decrypt quarantine files and thier metadata on compromised computer;
+
 ### Output parsed metadata Example 
     Defender Detection TimeStamp: 2024-08-27T21:37:57.562Z
     Threat ID: 2147894476
@@ -13,6 +19,8 @@ The tool can also decrypt malicious files stored by Defender and retrieve import
     Creation Time: 28.08.2024 0:37:27
     LastWrite Time: 28.08.2024 0:37:27
     LastAccess Time: 28.08.2024 0:37:45
+
+# Usage
 
 #### Defender Evidence Inspector Command Line Usage
     ██████╗░███████╗███████╗███████╗███╗░░██╗██████╗░███████╗██████╗░
@@ -49,6 +57,7 @@ The tool can also decrypt malicious files stored by Defender and retrieve import
        --outdir=<Path>               Path to directory where encrypted files would be decrypted.
        --default                     Gather and parse evidencies on entire host. !!!Requires local Administrator privileges!!!
 
+# Examples
 #### Default mode (REQUIRES LOCAL Administrator privileges)
     DefenderEvidenceInspector.exe --default
 In default mode, Defender Evidence Inspector extracts encrypted entries and quarantined malicious files from Windows Defender's standard quarantine directories, decrypting them to the current folder or a user-specified directory. Running the tool as Administrator is optional but enhances functionality. For instance, to extract and decrypt data by default, run the above command.
